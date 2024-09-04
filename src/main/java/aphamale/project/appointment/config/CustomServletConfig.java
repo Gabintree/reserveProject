@@ -1,4 +1,4 @@
-package com.example.login.config;
+package aphamale.project.appointment.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -9,7 +9,7 @@ public class CustomServletConfig implements WebMvcConfigurer{
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/api")
+        registry.addMapping("/**")
                 .allowedOrigins("http://localhost:3000")
                 .allowedMethods("HEAD","GET","POST","PUT","DELETE","OPTIONS")
                 .maxAge(3000)
